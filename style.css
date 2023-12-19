@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+
+.header {
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.navbar-list {
+  display: flex;
+}
+
+.navbar-item {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.navbar-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main content styles */
+
+.main-content {
+  align-items: center;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.meme {
+  margin-bottom: 40px;
+}
+
+.meme-image {
+  background-color: #000;
+  height: 320px;
+  width: 445px;
+}
+
+.meme-text {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.download-button {
+  background-color: gray;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 32px;
+}
+
+/* Aside */
+
+.aside-editor {
+  background-color: darkgray;
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+}
