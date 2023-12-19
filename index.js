@@ -7,6 +7,7 @@ const editMemeTextButton = document.querySelector("#editMemeTextButton");
 const asideImageEditor = document.querySelector("#asideImageEditor");
 const asideTextEditor = document.querySelector("#asideTextEditor");
 const imageForm = document.querySelector("#imageForm");
+const textForm = document.querySelector("#textForm");
 const memeImage = document.querySelector(".meme-image");
 const urlInput = document.querySelector("#urlInput");
 const imageBackgroundColorInput = document.querySelector(
@@ -18,6 +19,14 @@ const memeTopText = document.querySelector(".meme-top-text");
 const memeBottomText = document.querySelector(".meme-bottom-text");
 const withoutTopTextCheckbox = document.querySelector("#withoutTopText");
 const withoutBottomTextCheckbox = document.querySelector("#withoutBottomText");
+
+imageForm.onsubmit = (e) => {
+  e.preventDefault();
+};
+
+textForm.onsubmit = (e) => {
+  e.preventDefault();
+};
 
 // Open and close aside forms
 
@@ -36,10 +45,6 @@ const closeTextEditor = () => {
 
 closeTextEditorButton.addEventListener("click", closeTextEditor);
 editMemeImageButton.addEventListener("click", closeTextEditor);
-
-imageForm.onsubmit = (e) => {
-  e.preventDefault();
-};
 
 // Image settings
 
