@@ -72,7 +72,7 @@
   padding: 16px 32px;
 }
 
-/* Aside */
+/* Aside styles */
 
 .close-button {
   position: absolute;
@@ -99,22 +99,24 @@
   margin-bottom: 30px;
 }
 
+.form-control {
+  margin-bottom: 30px;
+}
+
 .form-label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 
 .filters-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
-}
-
-.filters-headline {
-  margin-bottom: 10px;
 }
 
 .filter-label {
   margin-bottom: 10px;
+}
+
+.checkbox-container {
+  display: flex;
 }

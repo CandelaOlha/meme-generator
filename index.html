@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/19e3c4985f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Meme generator</title>
   </head>
   <body>
@@ -42,24 +46,28 @@
     </div>
     <!-- Aside 1: image editor -->
     <aside class="image-editor aside-editor">
-      <button class="close-button" aria-label="close" id="closeImageEditor">
+      <button class="close-button" aria-label="Close" id="closeImageEditor">
         ✖
       </button>
       <form action="" method="post" class="editing-form">
         <h2 class="form-headline">Image</h2>
-        <label class="form-label">
-          Url
-          <input type="text" name="url" id="url" />
-        </label>
-        <label class="form-label">
-          Background
-          <input
-            type="color"
-            name="image-background-color"
-            id="imageBackgroundColor"
-          />
-        </label>
-        <div class="filters-container">
+        <div class="form-control">
+          <label class="form-label">
+            Url
+            <input type="text" name="url" id="url" />
+          </label>
+        </div>
+        <div class="form-control">
+          <label class="form-label">
+            Background
+            <input
+              type="color"
+              name="image-background-color"
+              id="imageBackgroundColor"
+            />
+          </label>
+        </div>
+        <div class="filters-container form-control">
           <h3 class="filters-headline">Filters</h3>
           <label class="filter-label">
             Bright
@@ -99,6 +107,115 @@
           </label>
         </div>
         <button class="restore-filters-button">Restore filters</button>
+      </form>
+    </aside>
+    <!-- Aside 2: text editor -->
+    <aside class="text-editor aside-editor">
+      <button class="close-button" aria-label="Close" id="closeTextEditor">
+        ✖
+      </button>
+      <form action="" method="post" class="editing-form">
+        <h2 class="form-headline">Text</h2>
+        <div class="form-control">
+          <label class="form-label">
+            Top text
+            <textarea name="top-text" id="topText"></textarea>
+          </label>
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              name="without-top-text"
+              id="withoutTopText"
+            />
+            <label for="without-top-text" class="form-label"
+              >Without top text</label
+            >
+          </div>
+        </div>
+        <div class="form-control">
+          <label class="form-label">
+            Bottom text
+            <textarea name="bottom-text" id="bottomText"></textarea>
+          </label>
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              name="without-bottom-text"
+              id="withoutBottomText"
+            />
+            <label for="without-bottom-text" class="form-label"
+              >Without bottom text</label
+            >
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="font-families" class="form-label">Fonts</label>
+          <select name="font-families" id="fontFamilies">
+            <option value="arial">Arial</option>
+            <option value="montserrat">Montserrat</option>
+            <option value="american-typewriter">American Typewriter</option>
+            <option value="monospace">Monospace</option>
+            <option value="comic-sans">Comic Sans MS</option>
+            <option value="comic-neue">Comic Neue</option>
+            <option value="impact">Impact</option>
+            <option value="verdana">Verdana</option>
+            <option value="dot-gothic">Dot Gothic</option>
+          </select>
+          <div class="font-styles-container">
+            <input type="number" name="font-size" id="fontSize" />
+            <button class="text-align" id="alignLeft">
+              <i class="fa-regular fa-align-left"></i>
+            </button>
+            <button class="text-align" id="alignCenter">
+              <i class="fa-regular fa-align-center"></i>
+            </button>
+            <button class="text-align" id="alignRight">
+              <i class="fa-regular fa-align-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-control">
+          <label class="form-label">
+            Color
+            <input type="color" name="text-color" id="textColor" />
+          </label>
+          <label class="form-label">
+            Background
+            <input
+              type="color"
+              name="text-background-color"
+              id="textBackgroundColor"
+            />
+          </label>
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              name="transparent-background"
+              id="transparentBackground"
+            />
+            <label for="transparent-background" class="form-label"
+              >Transparent background</label
+            >
+          </div>
+        </div>
+        <div class="form-control">
+          <h3 class="font-outline-headline">Outline</h3>
+          <button class="text-outline" id="noOutline">None</button>
+          <button class="text-outline" id="lightOutline">Light</button>
+          <button class="text-outline" id="darkOutline">Dark</button>
+        </div>
+        <div class="form-control">
+          <label class="form-label">
+            Spacing
+            <input type="number" name="text-spacing" id="textSpacing" />
+          </label>
+        </div>
+        <div class="form-control">
+          <label class="form-label">
+            Line height
+            <input type="number" name="text-line-height" id="textLineHeight" />
+          </label>
+        </div>
       </form>
     </aside>
   </body>
