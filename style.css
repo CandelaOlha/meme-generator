@@ -120,3 +120,7 @@
 .checkbox-container {
   display: flex;
 }
+
+.hidden {
+  display: none;
+}
