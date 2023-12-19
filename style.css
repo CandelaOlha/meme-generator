@@ -53,6 +53,7 @@
 
 .meme-image {
   background-color: #000;
+  background-size: cover;
   height: 320px;
   width: 445px;
 }

@@ -19,10 +19,14 @@
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-button">Image</button>
+              <button class="navbar-button" id="editMemeImageButton">
+                Image
+              </button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-button">Text</button>
+              <button class="navbar-button" id="editMemeTextButton">
+                Text
+              </button>
             </li>
             <li class="navbar-item">
               <button class="navbar-button">Light mode</button>
@@ -46,15 +50,19 @@
     </div>
     <!-- Aside 1: image editor -->
     <aside class="aside-editor" id="asideImageEditor">
-      <button class="close-button" aria-label="Close" id="closeImageEditor">
+      <button
+        class="close-button"
+        aria-label="Close"
+        id="closeImageEditorButton"
+      >
         ✖
       </button>
-      <form action="" method="post" class="editing-form">
+      <form action="" method="post" class="editing-form" id="imageForm">
         <h2 class="form-headline">Image</h2>
         <div class="form-control">
           <label class="form-label">
             Url
-            <input type="text" name="url" id="url" />
+            <input type="text" name="url" id="urlInput" />
           </label>
         </div>
         <div class="form-control">
@@ -63,7 +71,7 @@
             <input
               type="color"
               name="image-background-color"
-              id="imageBackgroundColor"
+              id="imageBackgroundColorInput"
             />
           </label>
         </div>
@@ -86,8 +94,8 @@
             <input type="range" name="blur" id="blur" />
           </label>
           <label class="filter-label">
-            Greyscale
-            <input type="range" name="greyscale" id="greyscale" />
+            Grayscale
+            <input type="range" name="grayscale" id="grayscale" />
           </label>
           <label class="filter-label">
             Sepia
@@ -111,7 +119,11 @@
     </aside>
     <!-- Aside 2: text editor -->
     <aside class="aside-editor" id="asideTextEditor">
-      <button class="close-button" aria-label="Close" id="closeTextEditor">
+      <button
+        class="close-button"
+        aria-label="Close"
+        id="closeTextEditorButton"
+      >
         ✖
       </button>
       <form action="" method="post" class="editing-form">
@@ -127,7 +139,7 @@
               name="without-top-text"
               id="withoutTopText"
             />
-            <label for="without-top-text" class="form-label"
+            <label for="withoutTopText" class="form-label"
               >Without top text</label
             >
           </div>
@@ -143,13 +155,13 @@
               name="without-bottom-text"
               id="withoutBottomText"
             />
-            <label for="without-bottom-text" class="form-label"
+            <label for="withoutBottomText" class="form-label"
               >Without bottom text</label
             >
           </div>
         </div>
         <div class="form-control">
-          <label for="font-families" class="form-label">Fonts</label>
+          <label for="fontFamilies" class="form-label">Fonts</label>
           <select name="font-families" id="fontFamilies">
             <option value="arial">Arial</option>
             <option value="montserrat">Montserrat</option>
@@ -193,7 +205,7 @@
               name="transparent-background"
               id="transparentBackground"
             />
-            <label for="transparent-background" class="form-label"
+            <label for="transparentBackground" class="form-label"
               >Transparent background</label
             >
           </div>
