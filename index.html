@@ -40,7 +40,66 @@
         <button class="download-button">Download meme</button>
       </main>
     </div>
-    <!-- Aside 1 -->
-    <aside class="aside-editor"></aside>
+    <!-- Aside 1: image editor -->
+    <aside class="image-editor aside-editor">
+      <button class="close-button" aria-label="close" id="closeImageEditor">
+        ✖
+      </button>
+      <form action="" method="post" class="editing-form">
+        <h2 class="form-headline">Image</h2>
+        <label class="form-label">
+          Url
+          <input type="text" name="url" id="url" />
+        </label>
+        <label class="form-label">
+          Background
+          <input
+            type="color"
+            name="image-background-color"
+            id="imageBackgroundColor"
+          />
+        </label>
+        <div class="filters-container">
+          <h3 class="filters-headline">Filters</h3>
+          <label class="filter-label">
+            Bright
+            <input type="range" name="bright" id="bright" />
+          </label>
+          <label class="filter-label">
+            Opacity
+            <input type="range" name="opacity" id="opacity" />
+          </label>
+          <label class="filter-label">
+            Contrast
+            <input type="range" name="contrast" id="contrast" />
+          </label>
+          <label class="filter-label">
+            Blur
+            <input type="range" name="blur" id="blur" />
+          </label>
+          <label class="filter-label">
+            Greyscale
+            <input type="range" name="greyscale" id="greyscale" />
+          </label>
+          <label class="filter-label">
+            Sepia
+            <input type="range" name="sepia" id="sepia" />
+          </label>
+          <label class="filter-label">
+            Hue
+            <input type="range" name="hue" id="hue" />
+          </label>
+          <label class="filter-label">
+            Saturated
+            <input type="range" name="saturated" id="saturated" />
+          </label>
+          <label class="filter-label">
+            Negative
+            <input type="range" name="negative" id="negative" />
+          </label>
+        </div>
+        <button class="restore-filters-button">Restore filters</button>
+      </form>
+    </aside>
   </body>
 </html>

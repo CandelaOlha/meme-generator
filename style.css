@@ -74,6 +74,12 @@
 
 /* Aside */
 
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .aside-editor {
   background-color: darkgray;
   min-height: 100vh;
@@ -81,4 +87,34 @@
   right: 0;
   top: 0;
   width: 300px;
+}
+
+.editing-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.form-headline {
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.filters-headline {
+  margin-bottom: 10px;
+}
+
+.filter-label {
+  margin-bottom: 10px;
 }
