@@ -12,6 +12,12 @@ const urlInput = document.querySelector("#urlInput");
 const imageBackgroundColorInput = document.querySelector(
   "#imageBackgroundColorInput"
 );
+const topTextEditor = document.querySelector("#topTextEditor");
+const bottomTextEditor = document.querySelector("#bottomTextEditor");
+const memeTopText = document.querySelector(".meme-top-text");
+const memeBottomText = document.querySelector(".meme-bottom-text");
+const withoutTopTextCheckbox = document.querySelector("#withoutTopText");
+const withoutBottomTextCheckbox = document.querySelector("#withoutBottomText");
 
 // Open and close aside forms
 
@@ -45,4 +51,30 @@ urlInput.onchange = () => {
 imageBackgroundColorInput.oninput = () => {
   const backgroundColor = imageBackgroundColorInput.value;
   memeImage.style.backgroundColor = backgroundColor;
+};
+
+// Text settings
+
+topTextEditor.oninput = () => {
+  memeTopText.textContent = topTextEditor.value;
+};
+
+withoutTopTextCheckbox.onchange = () => {
+  if (withoutTopTextCheckbox.checked) {
+    memeTopText.classList.add("hidden");
+  } else {
+    memeTopText.classList.remove("hidden");
+  }
+};
+
+bottomTextEditor.oninput = () => {
+  memeBottomText.textContent = bottomTextEditor.value;
+};
+
+withoutBottomTextCheckbox.onchange = () => {
+  if (withoutBottomTextCheckbox.checked) {
+    memeBottomText.classList.add("hidden");
+  } else {
+    memeBottomText.classList.remove("hidden");
+  }
 };
