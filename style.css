@@ -122,6 +122,10 @@
   display: flex;
 }
 
+.text-align-button {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
