@@ -122,6 +122,10 @@
   margin-bottom: 10px;
 }
 
+.restore-filters-button {
+  cursor: pointer;
+}
+
 .checkbox-container {
   display: flex;
 }

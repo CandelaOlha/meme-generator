@@ -13,6 +13,16 @@ const urlInput = document.querySelector("#url");
 const imageBackgroundColorInput = document.querySelector(
   "#imageBackgroundColor"
 );
+const brightInput = document.querySelector("#bright");
+const opacityInput = document.querySelector("#opacity");
+const contrastInput = document.querySelector("#contrast");
+const blurInput = document.querySelector("#blur");
+const grayscaleInput = document.querySelector("#grayscale");
+const sepiaInput = document.querySelector("#sepia");
+const hueInput = document.querySelector("#hue");
+const saturatedInput = document.querySelector("#saturated");
+const negativeInput = document.querySelector("#negative");
+const restoreFiltersButton = document.querySelector(".restore-filters-button");
 const topTextEditor = document.querySelector("#topTextEditor");
 const bottomTextEditor = document.querySelector("#bottomTextEditor");
 const memeTopText = document.querySelector(".meme-top-text");
@@ -71,6 +81,43 @@ urlInput.onchange = () => {
 imageBackgroundColorInput.oninput = () => {
   const backgroundColor = imageBackgroundColorInput.value;
   memeImage.style.backgroundColor = backgroundColor;
+};
+
+const updateFilters = () => {
+  memeImage.style.filter = `
+    brightness(${brightInput.value}) 
+    opacity(${opacityInput.value})
+    contrast(${contrastInput.value})
+    grayscale(${grayscaleInput.value}%)
+    blur(${blurInput.value}px)
+    sepia(${sepiaInput.value}%)
+    hue-rotate(${hueInput.value}deg)
+    saturate(${saturatedInput.value}%)
+    invert(${negativeInput.value})
+    `;
+};
+
+brightInput.addEventListener("change", updateFilters);
+opacityInput.addEventListener("change", updateFilters);
+contrastInput.addEventListener("change", updateFilters);
+blurInput.addEventListener("change", updateFilters);
+grayscaleInput.addEventListener("change", updateFilters);
+sepiaInput.addEventListener("change", updateFilters);
+hueInput.addEventListener("change", updateFilters);
+saturatedInput.addEventListener("change", updateFilters);
+negativeInput.addEventListener("change", updateFilters);
+
+restoreFiltersButton.onclick = () => {
+  memeImage.style.filter = "none";
+  brightInput.value = 1;
+  opacityInput.value = 1;
+  contrastInput.value = 100;
+  blurInput.value = 0;
+  grayscaleInput.value = 0;
+  sepiaInput.value = 0;
+  hueInput.value = 0;
+  saturatedInput.value = 100;
+  negativeInput.value = 0;
 };
 
 // Text settings
