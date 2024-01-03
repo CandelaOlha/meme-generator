@@ -172,7 +172,7 @@
             <option value="verdana">Verdana</option>
           </select>
           <div class="font-styles-container">
-            <input type="number" name="font-size" id="fontSize" value="22" />
+            <input type="number" name="font-size" id="fontSize" value="18" />
             <button class="text-align-button" id="alignLeft">
               <i class="fa-regular fa-align-left"></i>
             </button>
@@ -217,14 +217,25 @@
         <div class="form-control">
           <label class="form-label">
             Spacing
-            <input type="number" name="text-spacing" id="textSpacing" />
+            <input
+              type="number"
+              name="text-spacing"
+              id="textSpacing"
+              min="20"
+              max="50"
+              value="30"
+            />
           </label>
         </div>
         <div class="form-control">
-          <label class="form-label">
-            Line height
-            <input type="number" name="text-line-height" id="textLineHeight" />
-          </label>
+          <label for="textLineHeight" class="form-label">Line height</label>
+          <select name="line-height" id="textLineHeight">
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+          </select>
         </div>
       </form>
     </aside>

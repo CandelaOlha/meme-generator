@@ -26,6 +26,14 @@ const alignCenterButton = document.querySelector("#alignCenter");
 const alignRightButton = document.querySelector("#alignRight");
 const textColorInput = document.querySelector("#textColor");
 const textBackgroundColorInput = document.querySelector("#textBackgroundColor");
+const transparentBackgroundCheckbox = document.querySelector(
+  "#transparentBackground"
+);
+const noOutlineButton = document.querySelector("#noOutline");
+const lightOutlineButton = document.querySelector("#lightOutline");
+const darkOutlineButton = document.querySelector("#darkOutline");
+const textSpacingInput = document.querySelector("#textSpacing");
+const textLineHeightSelect = document.querySelector("#textLineHeight");
 
 imageForm.onsubmit = (e) => {
   e.preventDefault();
@@ -148,4 +156,58 @@ textBackgroundColorInput.oninput = () => {
   const textBackgroundColor = textBackgroundColorInput.value;
   memeTopText.style.backgroundColor = textBackgroundColor;
   memeBottomText.style.backgroundColor = textBackgroundColor;
+};
+
+transparentBackgroundCheckbox.onchange = () => {
+  const textBackgroundColor = textBackgroundColorInput.value;
+  if (transparentBackgroundCheckbox.checked) {
+    memeTopText.style.backgroundColor = "transparent";
+    memeBottomText.style.backgroundColor = "transparent";
+  } else {
+    memeTopText.style.backgroundColor = textBackgroundColor;
+    memeBottomText.style.backgroundColor = textBackgroundColor;
+  }
+};
+
+textBackgroundColorInput.value = "#ffffff";
+
+noOutlineButton.onclick = () => {
+  memeTopText.style.textShadow = "none";
+  memeBottomText.style.textShadow = "none";
+};
+
+lightOutlineButton.onclick = () => {
+  memeTopText.style.textShadow = "1px 1px #fff";
+  memeBottomText.style.textShadow = "1px 1px #fff";
+};
+
+darkOutlineButton.onclick = () => {
+  memeTopText.style.textShadow = "1px 1px #000";
+  memeBottomText.style.textShadow = "1px 1px #000";
+};
+
+textSpacingInput.onchange = () => {
+  const textPadding = `${textSpacingInput.value}px`;
+  memeTopText.style.padding = textPadding;
+  memeBottomText.style.padding = textPadding;
+};
+
+textLineHeightSelect.onchange = () => {
+  const lineHeight = textLineHeightSelect.value;
+  if (lineHeight === "1") {
+    memeTopText.style.lineHeight = "1";
+    memeBottomText.style.lineHeight = "1";
+  } else if (lineHeight === "1.2") {
+    memeTopText.style.lineHeight = "1.2";
+    memeBottomText.style.lineHeight = "1.2";
+  } else if (lineHeight === "1.5") {
+    memeTopText.style.lineHeight = "1.5";
+    memeBottomText.style.lineHeight = "1.5";
+  } else if (lineHeight === "2") {
+    memeTopText.style.lineHeight = "2";
+    memeBottomText.style.lineHeight = "2";
+  } else if (lineHeight === "2.5") {
+    memeTopText.style.lineHeight = "2.5";
+    memeBottomText.style.lineHeight = "2.5";
+  }
 };

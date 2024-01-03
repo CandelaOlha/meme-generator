@@ -49,6 +49,7 @@
 
 .meme {
   margin-bottom: 40px;
+  max-width: 445px;
 }
 
 .meme-image {
@@ -60,6 +61,9 @@
 
 .meme-text {
   background-color: #fff;
+  font-family: "Arial";
+  font-size: 18px;
+  line-height: 1;
   padding: 30px;
   text-align: center;
 }
