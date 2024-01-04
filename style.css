@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -14,7 +15,7 @@
 
 .header {
   align-items: center;
-  background-color: gray;
+  background-color: #203b46;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
+  font-size: 14px;
 }
 
 /* Main content styles */
@@ -69,24 +71,28 @@
 }
 
 .download-button {
-  background-color: gray;
+  background-color: #2a9d8f;
   border: none;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+  font-size: 14px;
   padding: 16px 32px;
 }
 
 /* Aside styles */
 
 .close-button {
+  cursor: pointer;
+  padding: 5px;
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
 .aside-editor {
-  background-color: darkgray;
+  background-color: #264653;
+  color: #fff;
   min-height: 100vh;
   position: absolute;
   right: 0;
@@ -109,6 +115,7 @@
 }
 
 .form-label {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
 }

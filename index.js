@@ -44,6 +44,7 @@ const lightOutlineButton = document.querySelector("#lightOutline");
 const darkOutlineButton = document.querySelector("#darkOutline");
 const textSpacingInput = document.querySelector("#textSpacing");
 const textLineHeightSelect = document.querySelector("#textLineHeight");
+const downloadButton = document.querySelector(".download-button");
 
 imageForm.onsubmit = (e) => {
   e.preventDefault();
@@ -257,4 +258,10 @@ textLineHeightSelect.onchange = () => {
     memeTopText.style.lineHeight = "2.5";
     memeBottomText.style.lineHeight = "2.5";
   }
+};
+
+// Download function
+
+downloadButton.onclick = () => {
+  console.log("Download meme");
 };
