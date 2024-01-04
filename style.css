@@ -19,7 +19,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
 }
 
 .navbar-list {
@@ -34,9 +34,15 @@
 .navbar-button {
   background-color: transparent;
   border: none;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
+  padding: 10px;
+}
+
+.active {
+  background-color: #3a5763;
 }
 
 /* Main content styles */
@@ -80,6 +86,10 @@
   padding: 16px 32px;
 }
 
+.download-button:hover {
+  background-color: #279185;
+}
+
 /* Aside styles */
 
 .close-button {
@@ -93,7 +103,7 @@
 .aside-editor {
   background-color: #264653;
   color: #fff;
-  min-height: 100vh;
+  height: 100vh;
   position: absolute;
   right: 0;
   top: 0;

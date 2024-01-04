@@ -56,9 +56,13 @@ textForm.onsubmit = (e) => {
 
 // Open and close aside forms
 
+editMemeTextButton.classList.add("active");
+
 const closeImageEditor = () => {
   asideImageEditor.classList.add("hidden");
   asideTextEditor.classList.remove("hidden");
+  editMemeTextButton.classList.add("active");
+  editMemeImageButton.classList.remove("active");
 };
 
 closeImageEditorButton.addEventListener("click", closeImageEditor);
@@ -67,6 +71,8 @@ editMemeTextButton.addEventListener("click", closeImageEditor);
 const closeTextEditor = () => {
   asideTextEditor.classList.add("hidden");
   asideImageEditor.classList.remove("hidden");
+  editMemeImageButton.classList.add("active");
+  editMemeTextButton.classList.remove("active");
 };
 
 closeTextEditorButton.addEventListener("click", closeTextEditor);
